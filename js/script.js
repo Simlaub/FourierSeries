@@ -8,9 +8,11 @@ let squareWaveInput = document.getElementById("squareWave");
 let sawtoothWaveInput = document.getElementById("sawtoothWave");
 let waveType = "squareWave";
 
+let dAngle = -0.02;
 let angle = 0;
 let graphPoints = [];
 let n = nInput.value;
+
 
 
 ctx.translate(xOffset, yOffset);
@@ -84,8 +86,8 @@ function draw() {
     }
   }
 
+  angle += dAngle;
 
-  angle -= 0.01;
   requestAnimationFrame(draw);
 }
 
